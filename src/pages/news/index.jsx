@@ -13,7 +13,7 @@ export default function News() {
     { label: "МАЖЛИСЛАР", id: "2" },
     { label: "ҲУДУДЛАРГА САФАРЛАР", id: "3" },
     { label: "ХОРИЖГА ТАШРИФЛАР", id: "4" },
-    { label: "ХОРИЖИЙ ДЕЛЕГАЦИЯЛАР", id: "5" },
+    { label: "ХОРИЖИЙ ДЕЛЕГАЦИЯЛАР bilan uchrashuv", id: "5" },
     { label: "НУТҚЛАР", id: "6" },
     { label: "ТАБРИКЛАР", id: "7" },
   ];

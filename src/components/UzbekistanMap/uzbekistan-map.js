@@ -1,0 +1,20 @@
+export default {
+  label: "Uzbekistan",
+  viewBox: "0 0 1000 600",
+  locations: [
+    { id: "Qoraqalpogiston", name: "Qoraqalpog‘iston Respublikasi" },
+    { id: "Andijon", name: "Andijon" },
+    { id: "Buxoro", name: "Buxoro" },
+    { id: "Fargona", name: "Farg‘ona" },
+    { id: "Jizzax", name: "Jizzax" },
+    { id: "Namangan", name: "Namangan" },
+    { id: "Navoiy", name: "Navoiy" },
+    { id: "Qashqadaryo", name: "Qashqadaryo" },
+    { id: "Samarqand", name: "Samarqand" },
+    { id: "Sirdaryo", name: "Sirdaryo" },
+    { id: "Surxondaryo", name: "Surxondaryo" },
+    { id: "Toshkent", name: "Toshkent shahri" },
+    { id: "ToshkentViloyati", name: "Toshkent viloyati" },
+    { id: "Xorazm", name: "Xorazm" },
+  ],
+};

@@ -9,9 +9,9 @@ export default function Uyushma() {
 
   // Menu categories
   const categories = [
-    { label: "Uyushma haqida", id: "1" },
-    { label: "Uyushma tarixi", id: "2" },
-    { label: "Uyushma qilgan ishlar", id: "3" },
+    { label: "Maqom", id: "1" },
+    { label: "Tarjimai hol", id: "2" },
+    { label: "Mukofotlar", id: "3" },
 
   ];
 
