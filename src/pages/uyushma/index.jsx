@@ -9,9 +9,12 @@ export default function Uyushma() {
 
   // Menu categories
   const categories = [
-    { label: "Maqom", id: "1" },
-    { label: "Tarjimai hol", id: "2" },
-    { label: "Mukofotlar", id: "3" },
+    { label: "Uyushma haqida", id: "1" },
+    { label: "Uyushma tarixi", id: "2" },
+    { label: "Uyushma faoliyati", id: "3" },
+    { label: "Uyushma maqsadi", id: "4" },
+    { label: "Uyushma missiyasi", id: "5" },
+    { label: "Uyushma qadryatlari", id: "6" },
 
   ];
 
@@ -24,6 +27,9 @@ export default function Uyushma() {
       1: ["Uyushma haqida"],
       2: ["Uyushma tarixi "],
       3: ["Uyushma qilgan sihlar "],
+      4: ["Uyushma maqsadi haqida "],
+      5: ["Uyushma missiyasi haqida "],
+      6: ["Uyushma qadryatlari haqida "],
 
     };
 

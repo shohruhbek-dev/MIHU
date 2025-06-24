@@ -7,11 +7,10 @@ export default function Documents() {
   const menuId = searchParams.get("menu_id") || "1";
 
   const categories = [
-    { label: "FARMONLAR", id: "1" },
+    { label: "Ustav", id: "1" },
     { label: "QARORLAR", id: "2" },
-    { label: "FARMOYISHLAR", id: "3" },
-    { label: "TASHABBUSLAR", id: "4" },
-    { label: "TARAQQIYOT STRATEGIYASI", id: "5" },
+    { label: "TASHABBUSLAR", id: "3" },
+    { label: "TARAQQIYOT STRATEGIYASI", id: "4" },
   ];
 
   const [documents, setDocuments] = useState([]);
@@ -19,11 +18,10 @@ export default function Documents() {
   useEffect(() => {
     // Simulated content based on menu_id
     const fakeDocData = {
-      1: ["Farmon: Ta’lim tizimini isloh qilish", "Farmon: Raqamli iqtisodiyot"],
+      1: ["Ustav: Ta’lim tizimini isloh qilish", "Ustav: Raqamli iqtisodiyot"],
       2: ["Qaror: Hududiy rivojlanish", "Qaror: Soliq imtiyozlari"],
-      3: ["Farmoyish: Yangi loyihalarni qo‘llab-quvvatlash"],
-      4: ["Tashabbus: Yoshlar forumi", "Tashabbus: Yashil energiya"],
-      5: ["Strategiya: 2030 yildagi maqsadlar"],
+      3: ["Tashabbus: Yoshlar forumi", "Tashabbus: Yashil energiya"],
+      4: ["Strategiya: 2030 yildagi maqsadlar"],
     };
 
     setDocuments(fakeDocData[menuId] || []);

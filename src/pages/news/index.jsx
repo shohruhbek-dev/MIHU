@@ -10,12 +10,10 @@ export default function News() {
   // Menu categories
   const categories = [
     { label: "ЯНГИЛИКЛАР", id: "1" },
-    { label: "МАЖЛИСЛАР", id: "2" },
-    { label: "ҲУДУДЛАРГА САФАРЛАР", id: "3" },
-    { label: "ХОРИЖГА ТАШРИФЛАР", id: "4" },
-    { label: "ХОРИЖИЙ ДЕЛЕГАЦИЯЛАР bilan uchrashuv", id: "5" },
-    { label: "НУТҚЛАР", id: "6" },
-    { label: "ТАБРИКЛАР", id: "7" },
+    { label: "ҲУДУДЛАРГА САФАРЛАР", id: "2" },
+    { label: "ХОРИЖГА ТАШРИФЛАР", id: "3" },
+    { label: "ХОРИЖИЙ ДЕЛЕГАЦИЯЛАР ", id: "4" },
+    { label: "ТАБРИКЛАР", id: "5" },
   ];
 
   // Fake news data simulation (in real case fetch from API)
@@ -25,12 +23,10 @@ export default function News() {
     // Simulate fetching news based on menu_id
     const fakeNewsData = {
       1: ["Prezident yangi farmonni imzoladi", "Iqtisodiy islohotlar davom etmoqda"],
-      2: ["Senat majlisi 2025", "Qonunchilik takliflari muhokama qilindi"],
-      3: ["Andijonga tashrif", "Samarqanddagi yangi loyihalar"],
-      4: ["AQSH safar tafsilotlari", "Xalqaro hamkorlik muhim mavzuda"],
-      5: ["Xitoy delegatsiyasi bilan uchrashuv", "Qozog‘iston bilan strategik hamkorlik"],
-      6: ["Yillik murojaat", "Milliy taraqqiyot strategiyasi"],
-      7: ["Mustaqillik bayrami tabrigi", "Ramazon hayiti munosabati bilan tabrik"],
+      2: ["Andijonga tashrif", "Samarqanddagi yangi loyihalar"],
+      3: ["AQSH safar tafsilotlari", "Xalqaro hamkorlik muhim mavzuda"],
+      4: ["Xitoy delegatsiyasi bilan uchrashuv", "Qozog‘iston bilan strategik hamkorlik"],
+      5: ["Mustaqillik bayrami tabrigi", "Ramazon hayiti munosabati bilan tabrik"],
     };
 
     setNews(fakeNewsData[menuId] || []);

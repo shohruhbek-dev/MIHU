@@ -7,8 +7,9 @@ export default function Contact() {
   const menuId = searchParams.get("menu_id") || "1";
 
   const categories = [
-    { label: "Prezidentga Murojaat", id: "1" },
-    { label: "Prezident Matbuot xizmati bilan bog'lanish", id: "2" },
+    { label: "A'zo bo'lish  hujjatlari", id: "1" },
+    { label: "A'zo bo'lish shartlari", id: "2" },
+    { label: "A'zo bo'lish uchun ariza", id: "3" },
  
   ];
 
@@ -16,8 +17,9 @@ export default function Contact() {
 
   useEffect(() => {
     const fakePartners = {
-      1: ["Prezidentga Murojaat bo'limi"],
-      2: ["Prezident Matbuot xizmati bilan bog'lanish bo'limi"],
+      1: ["A'zo bo'lish uchun kerakli hujjatlar: pasport nusxasi, ariza shakli"],
+      2: ["A'zo bo'lish shartlari: 18 yoshdan katta bo'lish, O'zbekiston fuqarosi bo'lish"],
+      3: ["A'zo bo'lish uchun ariza: onlayn shaklni to'ldirish yoki ofisga murojaat qilish"],
     
     };
 

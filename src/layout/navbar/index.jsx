@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, } from "lucide-react";
 import {
   FaTelegramPlane,
@@ -56,6 +56,7 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
+  const location = useLocation(); // Inside your Navbar component
   return (
     <>
       {/* Sidebar */}
@@ -79,7 +80,7 @@ export default function Navbar() {
             </h2>
           </div>
           <div className="space-y-3 flex flex-row justify-center flex-wrap gap-3">
-           <LanguageSelector variant="inline" />
+            <LanguageSelector variant="inline" />
 
           </div>
           <h3 className="mt-4 text-xl font-semibold text-center">
@@ -140,15 +141,19 @@ export default function Navbar() {
 
             </Link>
             <nav className="hidden md:flex items-center space-x-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  to={link.to}
-                  className="text-[#0C2543] hover:text-blue-600 font-medium"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = location.pathname === link.to;
+                return (
+                  <Link
+                    key={link.label}
+                    to={link.to}
+                    className={`font-medium hover:text-blue-600 ${isActive ? "text-[#1753A1]" : "text-[#0C2543]"
+                      }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
               <div className="flex items-center space-x-2 border-l pl-4 ml-2">
                 <LanguageSelector />
               </div>
@@ -173,16 +178,19 @@ export default function Navbar() {
 
         {isOpen && (
           <div id="mobile-nav" className="md:hidden bg-white shadow-md px-4 pb-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                to={link.to}
-                className="block py-2 text-[#0C2543] hover:text-blue-600"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.to;
+              return (
+                <Link
+                  key={link.label}
+                  to={link.to}
+                  className={`font-medium hover:text-blue-600 ${isActive ? "text-[#1753A1]" : "text-[#0C2543]"
+                    }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <div className="mt-2 flex space-x-2 border-t pt-2">
               <button className="text-sm hover:underline">UZ</button>
               <span>/</span>
