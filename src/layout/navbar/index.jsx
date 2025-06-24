@@ -63,7 +63,7 @@ export default function Navbar() {
       {isSidebarOpen && (
         <div
           id="sidebar"
-          className="fixed top-0 left-0 h-full w-[25%] bg-[#0D327F] text-white shadow-lg z-50 p-4 overflow-y-auto"
+          className="fixed top-0 left-0 h-full w-[25%] bg-[#1E99FF] text-white shadow-lg z-50 p-4 overflow-y-auto"
         >
           <div className="flex justify-end mb-2">
             <button
