@@ -88,31 +88,31 @@ export default function Navbar() {
           </h3>
           <div className="flex flex-col justify-center items-center gap-3 mt-4 border-b border-white pb-4 text-sm">
             <a href="#" className="hover:underline flex items-center gap-2">
-              <span className="p-2 bg-[#1753A1] rounded-full">
+              <span className="p-2 bg-[#1E99FF] rounded-full">
                 <FaTelegramPlane />
               </span>
               Telegram
             </a>
             <a href="#" className="hover:underline flex items-center gap-2">
-              <span className="p-2 bg-[#1753A1] rounded-full">
+              <span className="p-2 bg-[#1E99FF] rounded-full">
                 <FaFacebookF />
               </span>
               Facebook
             </a>
             <a href="#" className="hover:underline flex items-center gap-2">
-              <span className="p-2 bg-[#1753A1] border-white/50 rounded-full">
+              <span className="p-2 bg-[#1E99FF] border-white rounded-full">
                 <FaInstagram />
               </span>
               Instagram
             </a>
             <a href="#" className="hover:underline flex items-center gap-2">
-              <span className="p-2 bg-[#1753A1] border-white/50 rounded-full">
+              <span className="p-2 bg-[#1E99FF] border-white rounded-full">
                 <FaTwitter />
               </span>
               Twitter
             </a>
             <a href="#" className="hover:underline flex items-center gap-2">
-              <span className="p-2 bg-[#1753A1] border-white/50 rounded-full">
+              <span className="p-2 bg-[#1E99FF] border-white rounded-full">
                 <FaYoutube />
               </span>
               YouTube

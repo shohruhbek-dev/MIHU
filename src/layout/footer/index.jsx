@@ -89,18 +89,18 @@ export default function Footer() {
             <div key={section.id}>
               <Link
                 to={section.to}
-                className="text-[16px] font-bold "
+                className="text-[17px] font-bold "
               >
                 {section.label}
               </Link>
 
-              <ul className="mt-2 space-y-3 text-[#4F95FD] text-sm">
+              <ul className="mt-2 space-y-3 text-sm">
                 {section.items?.map((item, idx) => (
                   <li key={idx}>
                     <Link
                       to={`${item.parent}?menu_id=${item.menuId}`}
-                      className={` hover:underline  ${item.name === "Bog'lanish" ? "text-white" : "text-[#4F95FD]"
-                        } `}    >
+                      className={`text-white  ${item.name === "Bog'lanish" ? "text-[17px]" : "hover:underline"}`}
+                    >
                       {item.name}
                     </Link>
                   </li>
@@ -116,14 +116,7 @@ export default function Footer() {
           Diqqat! Agar siz matnda xatoliklarni aniqlasangiz, ularni belgilab,
           maʼmuriyatni xabardor qilish uchun Ctrl+Enter tugmalarini bosing
         </p>
-        <div className="mt-2 md:mt-0 flex items-center space-x-2">
-          <span>Ishlab chiqilgan:</span>
-          <img
-            src="https://uzinfocom.uz/images/logo-white.svg"
-            alt="Uzinfocom"
-            className="h-4"
-          />
-        </div>
+
       </div>
     </footer>
   );
