@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import logo2 from "../../assets/mainLogo1.png";
 export default function Footer() {
 
   const footerLinks = [
@@ -68,7 +68,7 @@ export default function Footer() {
       <div className="max-w-screen-xl mx-auto flex gap-7 flex-col xl:flex-row justify-between">
         <div className="mb-10">
           <img
-            src="/src/assets/mainLogo1.png"
+            src={logo2}
             alt="Gerb"
             className="w-full"
           />

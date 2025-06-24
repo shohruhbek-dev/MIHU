@@ -10,7 +10,7 @@ import {
   FaSearch,
 } from "react-icons/fa";
 import LanguageSelector from "../../components/languageSelecter";
-
+import logo1 from "../../assets/mainLogo.png"
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -134,7 +134,7 @@ export default function Navbar() {
           <div className="flex justify-between gap-6 items-center">
             <Link to="/" className="flex items-center  space-x-3">
               <img
-                src="/src/assets/mainLogo.png"
+                src={logo1}
                 alt="Logo"
                 className="h-20"
               />

@@ -6,6 +6,7 @@ const regionInfo = {
     email: "info@karakalpak.uz",
     address: "Nukus shahri, Dosnazarov ko‘chasi 1",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
   },
   Andijon: {
     name: "Andijon viloyati",
@@ -14,6 +15,8 @@ const regionInfo = {
     email: "andijon@viloyat.uz",
     address: "Andijon shahri, Mustaqillik ko‘chasi 12",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   Buxoro: {
     name: "Buxoro viloyati",
@@ -22,6 +25,8 @@ const regionInfo = {
     email: "buxoro@viloyat.uz",
     address: "Buxoro shahri, Ibn Sino ko‘chasi 4",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   Fargona: {
     name: "Farg‘ona viloyati",
@@ -30,6 +35,8 @@ const regionInfo = {
     email: "fargona@viloyat.uz",
     address: "Farg‘ona shahri, Shoh ko‘chasi 5",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   Jizzax: {
     name: "Jizzax viloyati",
@@ -38,6 +45,8 @@ const regionInfo = {
     email: "jizzax@viloyat.uz",
     address: "Jizzax shahri, Gagarin ko‘chasi 2",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   Namangan: {
     name: "Namangan viloyati",
@@ -46,6 +55,8 @@ const regionInfo = {
     email: "namangan@viloyat.uz",
     address: "Namangan shahri, Istiqlol ko‘chasi 15",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   Navoiy: {
     name: "Navoiy viloyati",
@@ -54,6 +65,8 @@ const regionInfo = {
     email: "navoiy@viloyat.uz",
     address: "Navoiy shahri, Navoiy ko‘chasi 8",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   Qashqadaryo: {
     name: "Qashqadaryo viloyati",
@@ -62,6 +75,8 @@ const regionInfo = {
     email: "qashqadaryo@viloyat.uz",
     address: "Qarshi shahri, Nasaf ko‘chasi 18",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   Samarqand: {
     name: "Samarqand viloyati",
@@ -70,6 +85,8 @@ const regionInfo = {
     email: "samarqand@viloyat.uz",
     address: "Samarqand shahri, Registon ko‘chasi 3",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   Sirdaryo: {
     name: "Sirdaryo viloyati",
@@ -78,6 +95,8 @@ const regionInfo = {
     email: "sirdaryo@viloyat.uz",
     address: "Guliston shahri, Istiqbol ko‘chasi 7",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   Surxondaryo: {
     name: "Surxondaryo viloyati",
@@ -86,6 +105,8 @@ const regionInfo = {
     email: "surxondaryo@viloyat.uz",
     address: "Termiz shahri, Alisher Navoiy ko‘chasi 6",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   Toshkent: {
     name: "Toshkent shahri",
@@ -94,6 +115,8 @@ const regionInfo = {
     email: "toshkent@shahar.uz",
     address: "Toshkent shahri, Amir Temur shoh ko‘chasi 1",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   ToshkentViloyati: {
     name: "Toshkent viloyati",
@@ -102,6 +125,8 @@ const regionInfo = {
     email: "toshkentvil@viloyat.uz",
     address: "Nurafshon shahri, Ma’rifat ko‘chasi 10",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
   Xorazm: {
     name: "Xorazm viloyati",
@@ -110,6 +135,8 @@ const regionInfo = {
     email: "xorazm@viloyat.uz",
     address: "Urganch shahri, Al-Xorazmiy ko‘chasi 9",
     hours: "Dushanba–Juma, 9:00–18:00",
+    img: "Viloyat raxbari rasmi"
+
   },
 };
 
