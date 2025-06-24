@@ -64,7 +64,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-blue-800 text-white pt-10 pb-6 px-6 md:px-20 text-sm font-medium">
+    <footer className="bg-[#0049AD] text-white pt-10 pb-6 px-6 md:px-20 text-sm font-medium">
       <div className="max-w-screen-xl mx-auto flex gap-7 flex-col xl:flex-row justify-between">
         <div className="mb-10">
           <img
