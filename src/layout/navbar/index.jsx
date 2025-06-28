@@ -10,19 +10,24 @@ import {
   FaSearch,
 } from "react-icons/fa";
 import LanguageSelector from "../../components/languageSelecter";
+import { useTranslation } from "react-i18next";
 import logo1 from "../../assets/mainLogo.png"
+
+
+
 export default function Navbar() {
+  const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const navLinks = [
-    { label: "Uyushma", to: "/uyushma" },
-    { label: "Yangiliklar", to: "/yangiliklar" },
-    { label: "Hujjatlar", to: "/hujjatlar" },
-    { label: "Media", to: "/media" },
-    { label: "Hamkorlar", to: "/partners" },
-    { label: "Murojaat", to: "/contact" },
-  ];
+    { label: t("navbarList.label1"), to: "/uyushma" },
+    { label: t("navbarList.label2"), to: "/yangiliklar" },
+    { label: t("navbarList.label3"), to: "/hujjatlar" },
+    { label: t("navbarList.label4"), to: "/media" },
+    { label: t("navbarList.label5"), to: "/partners" },
+    { label: t("navbarList.label6"), to: "/contact" },
+  ]
 
   // Outside click for Sidebar
   useEffect(() => {
@@ -76,47 +81,64 @@ export default function Navbar() {
           </div>
           <div className="mb-4 border-b border-white pb-4 text-center">
             <h2 className="text-xl font-semibold">
-              O‘zbekiston Respublikasi Prezidentining rasmiy veb-sayti
+              {t("navbarList.sidebartext1")}
             </h2>
           </div>
-          <div className="space-y-3 flex flex-row justify-center flex-wrap gap-3">
+          <div className="flex flex-row justify-center flex-wrap gap-3 my-7">
             <LanguageSelector variant="inline" />
 
           </div>
           <h3 className="mt-4 text-xl font-semibold text-center">
-            Ijtimoiy tarmoqlardagi rasmiy sahifalar
+            {t("navbarList.sidebartext2")}
           </h3>
-          <div className="flex flex-col justify-center items-center gap-3 mt-4 border-b border-white pb-4 text-sm">
-            <a href="#" className="hover:underline flex items-center gap-2">
-              <span className="p-2 bg-[#1E99FF] rounded-full">
-                <FaTelegramPlane />
-              </span>
-              Telegram
-            </a>
-            <a href="#" className="hover:underline flex items-center gap-2">
-              <span className="p-2 bg-[#1E99FF] rounded-full">
-                <FaFacebookF />
-              </span>
-              Facebook
-            </a>
-            <a href="#" className="hover:underline flex items-center gap-2">
-              <span className="p-2 bg-[#1E99FF] border-white rounded-full">
-                <FaInstagram />
-              </span>
-              Instagram
-            </a>
-            <a href="#" className="hover:underline flex items-center gap-2">
-              <span className="p-2 bg-[#1E99FF] border-white rounded-full">
-                <FaTwitter />
-              </span>
-              Twitter
-            </a>
-            <a href="#" className="hover:underline flex items-center gap-2">
-              <span className="p-2 bg-[#1E99FF] border-white rounded-full">
-                <FaYoutube />
-              </span>
-              YouTube
-            </a>
+          <div className="  flex flex-col justify-center items-center gap-3 mt-4 border-b border-white pb-4 text-sm">
+            <ul className="flex flex-col justify-center items-start gap-3 mt-4 text-sm">
+              <li>
+                <a href="#" className="hover:underline flex items-center gap-2">
+                  <span className="p-2 bg-[#0088cc] text-white border border-[#0088cc] rounded-full hover:bg-[#0077b6] transition">
+                    <FaTelegramPlane />
+                  </span>
+                  {t("navbarList.sidebartext3")}
+                </a>
+              </li>
+
+              <li>
+                <a href="#" className="hover:underline flex items-center gap-2">
+                  <span className="p-2 bg-[#0088cc] text-white border border-[#0088cc] rounded-full hover:bg-[#0077b6] transition">
+                    <FaFacebookF />
+                  </span>
+                  {t("navbarList.sidebartext4")}
+                </a>
+              </li>
+
+              <li>
+                <a href="#" className="hover:underline flex items-center gap-2">
+                  <span className="p-2 bg-[#0088cc] text-white border border-[#0088cc] rounded-full hover:bg-[#0077b6] transition">
+                    <FaInstagram />
+                  </span>
+                  {t("navbarList.sidebartext5")}
+                </a>
+              </li>
+
+              <li>
+                <a href="#" className="hover:underline flex items-center gap-2">
+                  <span className="p-2 bg-[#0088cc] text-white border border-[#0088cc] rounded-full hover:bg-[#0077b6] transition">
+                    <FaTwitter />
+                  </span>
+                  {t("navbarList.sidebartext6")}
+                </a>
+              </li>
+
+              <li>
+                <a href="#" className="hover:underline flex items-center gap-2">
+                  <span className="p-2 bg-[#0088cc] text-white border border-[#0088cc] rounded-full hover:bg-[#0077b6] transition">
+                    <FaYoutube />
+                  </span>
+                  {t("navbarList.sidebartext7")}
+                </a>
+              </li>
+            </ul>
+
           </div>
         </div>
       )}
@@ -191,11 +213,7 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <div className="mt-2 flex space-x-2 border-t pt-2">
-              <button className="text-sm hover:underline">UZ</button>
-              <span>/</span>
-              <button className="text-sm hover:underline">RU</button>
-            </div>
+
           </div>
         )}
       </header>

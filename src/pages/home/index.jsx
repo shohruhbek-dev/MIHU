@@ -1,26 +1,48 @@
 import UzbekistanMap from "../../components/UzbekistanMap";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
+
   const latestNews = [
-    { img: "Yangilik uchun rasm", title: "Yangilik sarlavhasi", date: "Yangilik sanasi" },
-    { img: "Yangilik uchun rasm", title: "Yangilik sarlavhasi", date: "Yangilik sanasi" },
-    { img: "Yangilik uchun rasm", title: "Yangilik sarlavhasi", date: "Yangilik sanasi" },
-    { img: "Yangilik uchun rasm", title: "Yangilik sarlavhasi", date: "Yangilik sanasi" }
-  ]
+    {
+      img: "Yangilik uchun rasm",
+      title: t("home.newsTitle"),
+      date: t("home.newsDate")
+    },
+    {
+      img: "Yangilik uchun rasm",
+      title: t("home.newsTitle"),
+      date: t("home.newsDate")
+    },
+    {
+      img: "Yangilik uchun rasm",
+      title: t("home.newsTitle"),
+      date: t("home.newsDate")
+    },
+    {
+      img: "Yangilik uchun rasm",
+      title: t("home.newsTitle"),
+      date: t("home.newsDate")
+    }
+  ];
+
   return (
     <section className="py-12 px-4">
       <h1 className="text-3xl font-bold text-[#0C2543] mb-4">
-        Bosh sahifa
+        {t("home.pageTitle")}
       </h1>
       <p className="text-gray-700 text-lg">
-        Bu yerda siz Prezident faoliyati, yangiliklar, hujjatlar va boshqa ma’lumotlarni topishingiz mumkin.
+        {t("home.description")}
       </p>
-      <div >
+
+      <div>
         <UzbekistanMap className="w-full h-auto" />
       </div>
+
       <div className="py-10 px-4 md:px-10 bg-gray-50">
-        <h1 className="text-3xl font-bold text-[#113892] mb-6">So‘ngi yangiliklar</h1>
+        <h1 className="text-3xl font-bold text-[#113892] mb-6">{t("home.latestNews")}</h1>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {latestNews.map((item, index) => (
@@ -48,7 +70,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
-    </section >
+    </section>
   );
 }

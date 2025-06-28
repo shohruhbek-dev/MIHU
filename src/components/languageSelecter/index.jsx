@@ -3,13 +3,15 @@ import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import "../../i18n";
 
-const languages = [
-  { code: "en", label: "English" },
-  { code: "uz", label: "O‘zbek" },
-  { code: "ru", label: "Русский" },
-];
 
 const LanguageSelector = ({ variant = "dropdown" }) => {
+  const { t } = useTranslation()
+  const languages = [
+
+    { code: "en", label: t("languages.en") },
+    { code: "uz", label: t("languages.uz") },
+    { code: "ru", label: t("languages.ru") },
+  ];
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -38,7 +40,6 @@ const LanguageSelector = ({ variant = "dropdown" }) => {
     };
   }, [variant]);
 
-  // --- Variant: Inline ---
   if (variant === "inline") {
     return (
       <div className="flex gap-2 items-center">
@@ -79,8 +80,8 @@ const LanguageSelector = ({ variant = "dropdown" }) => {
               key={lang.code}
               onClick={() => handleSelect(lang.code)}
               className={`w-full text-left px-4 py-2 text-sm transition duration-150 hover:bg-gray-100 ${lang.code === i18n.language
-                  ? "bg-gray-200 font-semibold"
-                  : ""
+                ? "bg-gray-200 font-semibold"
+                : ""
                 }`}
             >
               {lang.label}

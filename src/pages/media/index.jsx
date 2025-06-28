@@ -1,33 +1,31 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Media() {
+  const { t } = useTranslation();
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const menuId = searchParams.get("menu_id") || "1";
 
   const categories = [
-    { label: "Fotogalareya", id: "1" },
-    { label: "Videogalareya", id: "2" },
- 
+    { label: t("mediaPage.cat1"), id: "1" },
+    { label: t("mediaPage.cat2"), id: "2" }
   ];
 
-  const [partners, setPartners] = useState([]);
+  const [mediaItems, setMediaItems] = useState([]);
 
   useEffect(() => {
-    const fakePartners = {
-      1: ["Rasmlar"],
-      2: ["Videolar"],
-    
+    const fakeData = {
+      1: [t("mediaPage.item1")],
+      2: [t("mediaPage.item2")]
     };
 
-    setPartners(fakePartners[menuId] || []);
-  }, [menuId]);
+    setMediaItems(fakeData[menuId] || []);
+  }, [menuId, t]);
 
   return (
     <div className="w-[80%] m-auto my-10 bg-white shadow-lg border border-gray-200 rounded-md">
-      
-      {/* Mini Navbar */}
       <nav className="border-b border-gray-200">
         <div className="flex flex-wrap px-4 space-x-6 text-sm font-medium overflow-x-auto">
           {categories.map((cat) => (
@@ -51,16 +49,14 @@ export default function Media() {
           {categories.find((c) => c.id === menuId)?.label}
         </h1>
 
-        {partners.length > 0 ? (
+        {mediaItems.length > 0 ? (
           <ul className="space-y-4">
-            {partners.map((item, idx) => (
-              <li key={idx} className="text-gray-800 text-lg ">
-                • {item}
-              </li>
+            {mediaItems.map((item, idx) => (
+              <li key={idx} className="text-gray-800 text-lg">• {item}</li>
             ))}
           </ul>
         ) : (
-          <p className="text-gray-500">Bu bo‘limda hali hamkorlar mavjud emas.</p>
+          <p className="text-gray-500">{t("mediaPage.noData")}</p>
         )}
       </section>
     </div>

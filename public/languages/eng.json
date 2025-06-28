@@ -1,3 +1,267 @@
 {
-    "kirish": "kirish"
+  "navbarList": {
+    "label1": "Association",
+    "label2": "News",
+    "label3": "Documents",
+    "label4": "Media",
+    "label5": "Partners",
+    "label6": "Contact",
+    "sidebartext1": "Official website of the President of the Republic of Uzbekistan",
+    "sidebartext2": "Official pages on social networks",
+    "sidebartext3": "Telegram",
+    "sidebartext4": "Facebook",
+    "sidebartext5": "Instagram",
+    "sidebartext6": "Twitter",
+    "sidebartext7": "YouTube"
+  },
+  "languages": {
+    "uz": "Uzbek",
+    "ru": "Russian",
+    "en": "English"
+  },
+  "footer": {
+    "uyushma": "Association",
+    "uyushma1": "About the Association",
+    "uyushma2": "Biography",
+    "uyushma3": "Awards",
+    "news": "News",
+    "news1": "News",
+    "news2": "Meetings",
+    "news3": "Regional Visits",
+    "news4": "Foreign Visits",
+    "news5": "Meetings with Foreign Delegations",
+    "news6": "Speeches",
+    "news7": "Greetings",
+    "docs": "Documents",
+    "docs1": "Decrees",
+    "docs2": "Decisions",
+    "docs3": "Orders",
+    "docs4": "Development Strategy",
+    "docs5": "Initiatives",
+    "partners": "Partners",
+    "partners1": "About the Administration",
+    "partners2": "Leadership",
+    "partners3": "Subordinate Organizations",
+    "media": "Media",
+    "media1": "Photo Gallery",
+    "media2": "Video Gallery",
+    "contact": "Contact",
+    "disclaimer": "When using materials, a link to www.president.uz is required",
+    "official": "Official website of the President of the Republic of Uzbekistan",
+    "rights": "All rights reserved",
+    "notice": "Note! If you find an error in the text, select it and press Ctrl+Enter to notify the administration"
+  },
+  "uyushmaPage": {
+    "cat1": "About the Association",
+    "cat2": "History of the Association",
+    "cat3": "Activities of the Association",
+    "cat4": "Goals of the Association",
+    "cat5": "Mission of the Association",
+    "cat6": "Values of the Association",
+    "news1": "Information about the Association",
+    "news2": "History of the Association",
+    "news3": "Work done by the Association",
+    "news4": "Goals and objectives of the Association",
+    "news5": "Mission and directions",
+    "news6": "Values and principles of the Association",
+    "noNews": "There are no news items at the moment."
+  },
+  "newsPage": {
+    "cat1": "NEWS",
+    "cat2": "REGIONAL VISITS",
+    "cat3": "FOREIGN VISITS",
+    "cat4": "FOREIGN DELEGATIONS",
+    "cat5": "CONGRATULATIONS",
+    "news1_1": "President signed a new decree",
+    "news1_2": "Economic reforms are ongoing",
+    "news2_1": "Visit to Andijan",
+    "news2_2": "New projects in Samarkand",
+    "news3_1": "Details of the US visit",
+    "news3_2": "International cooperation was a key topic",
+    "news4_1": "Meeting with Chinese delegation",
+    "news4_2": "Strategic partnership with Kazakhstan",
+    "news5_1": "Congratulations on Independence Day",
+    "news5_2": "Holiday greetings for Ramadan",
+    "noNews": "There are no news items at the moment."
+  },
+  "contactPage": {
+    "cat1": "Membership Documents",
+    "cat2": "Membership Conditions",
+    "cat3": "Membership Application",
+    "text1": "Required documents for membership: passport copy, application form",
+    "text2": "Membership conditions: must be over 18, citizen of Uzbekistan",
+    "text3": "How to apply: fill out the online form or visit our office",
+    "noData": "There is no information in this section yet."
+  },
+  "documentsPage": {
+    "cat1": "Charter",
+    "cat2": "Decisions",
+    "cat3": "Initiatives",
+    "cat4": "Development Strategy",
+    "doc1_1": "Charter: Reforming the education system",
+    "doc1_2": "Charter: Digital economy",
+    "doc2_1": "Decision: Regional development",
+    "doc2_2": "Decision: Tax incentives",
+    "doc3_1": "Initiative: Youth Forum",
+    "doc3_2": "Initiative: Green energy",
+    "doc4_1": "Strategy: Goals for 2030",
+    "noData": "There are no documents in this section yet."
+  },
+  "partnersPage": {
+    "cat1": "International Organizations",
+    "cat2": "Non-Governmental Organizations",
+    "cat3": "Educational Institutions",
+    "cat4": "IT Companies",
+    "cat5": "Financial Institutions",
+    "int1": "UN (United Nations)",
+    "int2": "UNESCO",
+    "int3": "UNICEF",
+    "ndo1": "Uzbekistan Youth Union",
+    "ndo2": "Ekopartners NGO",
+    "edu1": "MIT – Massachusetts Institute of Technology",
+    "edu2": "Tashkent University of Information Technologies",
+    "it1": "EPAM Systems",
+    "it2": "Yandex",
+    "it3": "IT Park Uzbekistan",
+    "fin1": "Asian Development Bank",
+    "fin2": "World Bank",
+    "fin3": "National Bank",
+    "noData": "There are no partners in this section yet."
+  },
+  "mediaPage": {
+    "cat1": "Photo Gallery",
+    "cat2": "Video Gallery",
+    "item1": "Photos",
+    "item2": "Videos",
+    "noData": "No content available in this section yet."
+  },
+  "home": {
+    "pageTitle": "Home",
+    "description": "Here you can find information about the President's activities, news, documents, and more.",
+    "latestNews": "Latest News",
+    "newsTitle": "News Title",
+    "newsDate": "News Date"
+  },
+  "labels": {
+    "governor": "Governor",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Working hours",
+    "selectRegion": "Select a region from the map."
+  },
+  "regions": {
+    "qoraqalpogiston": {
+      "name": "Republic of Karakalpakstan",
+      "head": "Qahramon Qambarov",
+      "phone": "+998 61 224 45 67",
+      "email": "info@karakalpak.uz",
+      "address": "Nukus city, Dosnazarov street 1",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "andijon": {
+      "name": "Andijan Region",
+      "head": "Shohruhbek Gafurov",
+      "phone": "+998 74 123 45 67",
+      "email": "andijon@viloyat.uz",
+      "address": "Andijan city, Mustaqillik street 12",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "buxoro": {
+      "name": "Bukhara Region",
+      "head": "Khurshid Ismoilov",
+      "phone": "+998 65 765 43 21",
+      "email": "buxoro@viloyat.uz",
+      "address": "Bukhara city, Ibn Sina street 4",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "fargona": {
+      "name": "Fergana Region",
+      "head": "Azizbek Rustamov",
+      "phone": "+998 73 456 78 90",
+      "email": "fargona@viloyat.uz",
+      "address": "Fergana city, Shah street 5",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "jizzax": {
+      "name": "Jizzakh Region",
+      "head": "Alisher Usmonov",
+      "phone": "+998 72 345 67 89",
+      "email": "jizzax@viloyat.uz",
+      "address": "Jizzakh city, Gagarin street 2",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "namangan": {
+      "name": "Namangan Region",
+      "head": "Murodillo Hamidov",
+      "phone": "+998 69 321 00 11",
+      "email": "namangan@viloyat.uz",
+      "address": "Namangan city, Istiqlol street 15",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "navoiy": {
+      "name": "Navoi Region",
+      "head": "Azamat Niyozov",
+      "phone": "+998 79 444 22 11",
+      "email": "navoiy@viloyat.uz",
+      "address": "Navoi city, Navoi street 8",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "qashqadaryo": {
+      "name": "Kashkadarya Region",
+      "head": "Sherzod Mamatqulov",
+      "phone": "+998 75 555 66 77",
+      "email": "qashqadaryo@viloyat.uz",
+      "address": "Karshi city, Nasaf street 18",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "samarqand": {
+      "name": "Samarkand Region",
+      "head": "Ulugbek Rahimov",
+      "phone": "+998 66 123 45 67",
+      "email": "samarqand@viloyat.uz",
+      "address": "Samarkand city, Registon street 3",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "sirdaryo": {
+      "name": "Sirdaryo Region",
+      "head": "Rustam Yusupov",
+      "phone": "+998 67 234 56 78",
+      "email": "sirdaryo@viloyat.uz",
+      "address": "Gulistan city, Istiqlol street 7",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "surxondaryo": {
+      "name": "Surkhandarya Region",
+      "head": "Zafar Rahmatov",
+      "phone": "+998 76 654 32 10",
+      "email": "surxondaryo@viloyat.uz",
+      "address": "Termez city, Alisher Navoi street 6",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "toshkent": {
+      "name": "Tashkent City",
+      "head": "Jahongir Ortiqkhojayev",
+      "phone": "+998 71 200 00 00",
+      "email": "toshkent@shahar.uz",
+      "address": "Tashkent, Amir Temur avenue 1",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "toshkentViloyati": {
+      "name": "Tashkent Region",
+      "head": "Shukurulloxon Qodirov",
+      "phone": "+998 70 111 22 33",
+      "email": "toshkentvil@viloyat.uz",
+      "address": "Nurafshon city, Ma'rifat street 10",
+      "hours": "Monday–Friday, 9:00–18:00"
+    },
+    "xorazm": {
+      "name": "Khorezm Region",
+      "head": "Doniyor Karimov",
+      "phone": "+998 62 333 44 55",
+      "email": "xorazm@viloyat.uz",
+      "address": "Urganch city, Al-Khwarizmi street 9",
+      "hours": "Monday–Friday, 9:00–18:00"
+    }
+  }
 }

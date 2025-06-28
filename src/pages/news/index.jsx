@@ -1,40 +1,38 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function News() {
-  // Read ?menu_id from URL
   const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const menuId = searchParams.get("menu_id") || "1"; // Default to 1
+  const { t } = useTranslation();
 
-  // Menu categories
+  const searchParams = new URLSearchParams(location.search);
+  const menuId = searchParams.get("menu_id") || "1";
+
   const categories = [
-    { label: "ЯНГИЛИКЛАР", id: "1" },
-    { label: "ҲУДУДЛАРГА САФАРЛАР", id: "2" },
-    { label: "ХОРИЖГА ТАШРИФЛАР", id: "3" },
-    { label: "ХОРИЖИЙ ДЕЛЕГАЦИЯЛАР ", id: "4" },
-    { label: "ТАБРИКЛАР", id: "5" },
+    { label: t("newsPage.cat1"), id: "1" },
+    { label: t("newsPage.cat2"), id: "2" },
+    { label: t("newsPage.cat3"), id: "3" },
+    { label: t("newsPage.cat4"), id: "4" },
+    { label: t("newsPage.cat5"), id: "5" },
   ];
 
-  // Fake news data simulation (in real case fetch from API)
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    // Simulate fetching news based on menu_id
     const fakeNewsData = {
-      1: ["Prezident yangi farmonni imzoladi", "Iqtisodiy islohotlar davom etmoqda"],
-      2: ["Andijonga tashrif", "Samarqanddagi yangi loyihalar"],
-      3: ["AQSH safar tafsilotlari", "Xalqaro hamkorlik muhim mavzuda"],
-      4: ["Xitoy delegatsiyasi bilan uchrashuv", "Qozog‘iston bilan strategik hamkorlik"],
-      5: ["Mustaqillik bayrami tabrigi", "Ramazon hayiti munosabati bilan tabrik"],
+      1: [t("newsPage.news1_1"), t("newsPage.news1_2")],
+      2: [t("newsPage.news2_1"), t("newsPage.news2_2")],
+      3: [t("newsPage.news3_1"), t("newsPage.news3_2")],
+      4: [t("newsPage.news4_1"), t("newsPage.news4_2")],
+      5: [t("newsPage.news5_1"), t("newsPage.news5_2")],
     };
 
     setNews(fakeNewsData[menuId] || []);
-  }, [menuId]);
+  }, [menuId, t]);
 
   return (
     <div className="newsPAge w-[80%] m-auto my-10 bg-white shadow-lg border border-gray-200 rounded-md">
-      
       {/* Mini Navbar */}
       <nav className="border-b border-gray-200">
         <div className="miniNewsnav flex flex-wrap px-4 space-x-6 text-sm font-medium overflow-x-auto">
@@ -68,7 +66,7 @@ export default function News() {
             ))}
           </ul>
         ) : (
-          <p className="text-gray-500">Hozircha yangiliklar yo‘q.</p>
+          <p className="text-gray-500">{t("newsPage.noNews")}</p>
         )}
       </section>
     </div>

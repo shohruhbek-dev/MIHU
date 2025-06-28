@@ -1,37 +1,41 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Partners() {
+  const { t } = useTranslation();
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const menuId = searchParams.get("menu_id") || "1";
 
   const categories = [
-    { label: "XALQARO TASHKILOTLAR", id: "1" },
-    { label: "NODAVLAT TASHKILOTLAR", id: "2" },
-    { label: "TA'LIM MUASSASALARI", id: "3" },
-    { label: "IT KOMPANIYALAR", id: "4" },
-    { label: "MOLIYAVIY INSTITUTLAR", id: "5" },
+    { label: t("partnersPage.cat1"), id: "1" },
+    { label: t("partnersPage.cat2"), id: "2" },
+    { label: t("partnersPage.cat3"), id: "3" },
+    { label: t("partnersPage.cat4"), id: "4" },
+    { label: t("partnersPage.cat5"), id: "5" }
   ];
 
   const [partners, setPartners] = useState([]);
 
   useEffect(() => {
     const fakePartners = {
-      1: ["BMT (United Nations)", "UNESCO", "UNICEF"],
-      2: ["O‘zbekiston Yoshlar Ittifoqi", "Ekopartners NGO"],
-      3: ["MIT – Massachusetts Institute of Technology", "Toshkent Axborot Texnologiyalari Universiteti"],
-      4: ["EPAM Systems", "Yandex", "IT Park Uzbekistan"],
-      5: ["Asian Development Bank", "World Bank", "Milliy bank"],
+      1: [
+        t("partnersPage.int1"),
+        t("partnersPage.int2"),
+        t("partnersPage.int3")
+      ],
+      2: [t("partnersPage.ndo1"), t("partnersPage.ndo2")],
+      3: [t("partnersPage.edu1"), t("partnersPage.edu2")],
+      4: [t("partnersPage.it1"), t("partnersPage.it2"), t("partnersPage.it3")],
+      5: [t("partnersPage.fin1"), t("partnersPage.fin2"), t("partnersPage.fin3")]
     };
 
     setPartners(fakePartners[menuId] || []);
-  }, [menuId]);
+  }, [menuId, t]);
 
   return (
     <div className="w-[80%] m-auto my-10 bg-white shadow-lg border border-gray-200 rounded-md">
-      
-      {/* Mini Navbar */}
       <nav className="border-b border-gray-200">
         <div className="flex flex-wrap px-4 space-x-6 text-sm font-medium overflow-x-auto">
           {categories.map((cat) => (
@@ -50,7 +54,6 @@ export default function Partners() {
         </div>
       </nav>
 
-      {/* Dynamic Content */}
       <section className="py-12 px-4">
         <h1 className="text-3xl font-bold text-[#0C2543] mb-6">
           {categories.find((c) => c.id === menuId)?.label}
@@ -59,13 +62,13 @@ export default function Partners() {
         {partners.length > 0 ? (
           <ul className="space-y-4">
             {partners.map((item, idx) => (
-              <li key={idx} className="text-gray-800 text-lg ">
+              <li key={idx} className="text-gray-800 text-lg">
                 • {item}
               </li>
             ))}
           </ul>
         ) : (
-          <p className="text-gray-500">Bu bo‘limda hali hamkorlar mavjud emas.</p>
+          <p className="text-gray-500">{t("partnersPage.noData")}</p>
         )}
       </section>
     </div>

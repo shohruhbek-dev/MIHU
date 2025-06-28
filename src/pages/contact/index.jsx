@@ -1,34 +1,34 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
   const location = useLocation();
+  const { t } = useTranslation();
+
   const searchParams = new URLSearchParams(location.search);
   const menuId = searchParams.get("menu_id") || "1";
 
   const categories = [
-    { label: "A'zo bo'lish  hujjatlari", id: "1" },
-    { label: "A'zo bo'lish shartlari", id: "2" },
-    { label: "A'zo bo'lish uchun ariza", id: "3" },
- 
+    { label: t("contactPage.cat1"), id: "1" },
+    { label: t("contactPage.cat2"), id: "2" },
+    { label: t("contactPage.cat3"), id: "3" },
   ];
 
   const [partners, setPartners] = useState([]);
 
   useEffect(() => {
     const fakePartners = {
-      1: ["A'zo bo'lish uchun kerakli hujjatlar: pasport nusxasi, ariza shakli"],
-      2: ["A'zo bo'lish shartlari: 18 yoshdan katta bo'lish, O'zbekiston fuqarosi bo'lish"],
-      3: ["A'zo bo'lish uchun ariza: onlayn shaklni to'ldirish yoki ofisga murojaat qilish"],
-    
+      1: [t("contactPage.text1")],
+      2: [t("contactPage.text2")],
+      3: [t("contactPage.text3")],
     };
 
     setPartners(fakePartners[menuId] || []);
-  }, [menuId]);
+  }, [menuId, t]);
 
   return (
     <div className="w-[80%] m-auto my-10 bg-white shadow-lg border border-gray-200 rounded-md">
-      
       {/* Mini Navbar */}
       <nav className="border-b border-gray-200">
         <div className="flex flex-wrap px-4 space-x-6 text-sm font-medium overflow-x-auto">
@@ -56,13 +56,13 @@ export default function Contact() {
         {partners.length > 0 ? (
           <ul className="space-y-4">
             {partners.map((item, idx) => (
-              <li key={idx} className="text-gray-800 text-lg ">
+              <li key={idx} className="text-gray-800 text-lg">
                 • {item}
               </li>
             ))}
           </ul>
         ) : (
-          <p className="text-gray-500">Bu bo‘limda hali hamkorlar mavjud emas.</p>
+          <p className="text-gray-500">{t("contactPage.noData")}</p>
         )}
       </section>
     </div>

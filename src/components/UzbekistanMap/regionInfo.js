@@ -1,143 +1,130 @@
 const regionInfo = {
   Qoraqalpogiston: {
-    name: "Qoraqalpog‘iston Respublikasi",
-    head: "Qahramon Qambarov",
-    phone: "+998 61 224 45 67",
-    email: "info@karakalpak.uz",
-    address: "Nukus shahri, Dosnazarov ko‘chasi 1",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.qoraqalpogiston.name",
+    headKey: "regions.qoraqalpogiston.head",
+    phoneKey: "regions.qoraqalpogiston.phone",
+    emailKey: "regions.qoraqalpogiston.email",
+    addressKey: "regions.qoraqalpogiston.address",
+    hoursKey: "regions.qoraqalpogiston.hours",
     img: "Viloyat raxbari rasmi"
   },
   Andijon: {
-    name: "Andijon viloyati",
-    head: "Shohruhbek G‘afurov",
-    phone: "+998 74 123 45 67",
-    email: "andijon@viloyat.uz",
-    address: "Andijon shahri, Mustaqillik ko‘chasi 12",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.andijon.name",
+    headKey: "regions.andijon.head",
+    phoneKey: "regions.andijon.phone",
+    emailKey: "regions.andijon.email",
+    addressKey: "regions.andijon.address",
+    hoursKey: "regions.andijon.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   Buxoro: {
-    name: "Buxoro viloyati",
-    head: "Xurshid Ismoilov",
-    phone: "+998 65 765 43 21",
-    email: "buxoro@viloyat.uz",
-    address: "Buxoro shahri, Ibn Sino ko‘chasi 4",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.buxoro.name",
+    headKey: "regions.buxoro.head",
+    phoneKey: "regions.buxoro.phone",
+    emailKey: "regions.buxoro.email",
+    addressKey: "regions.buxoro.address",
+    hoursKey: "regions.buxoro.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   Fargona: {
-    name: "Farg‘ona viloyati",
-    head: "Azizbek Rustamov",
-    phone: "+998 73 456 78 90",
-    email: "fargona@viloyat.uz",
-    address: "Farg‘ona shahri, Shoh ko‘chasi 5",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.fargona.name",
+    headKey: "regions.fargona.head",
+    phoneKey: "regions.fargona.phone",
+    emailKey: "regions.fargona.email",
+    addressKey: "regions.fargona.address",
+    hoursKey: "regions.fargona.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   Jizzax: {
-    name: "Jizzax viloyati",
-    head: "Alisher Usmonov",
-    phone: "+998 72 345 67 89",
-    email: "jizzax@viloyat.uz",
-    address: "Jizzax shahri, Gagarin ko‘chasi 2",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.jizzax.name",
+    headKey: "regions.jizzax.head",
+    phoneKey: "regions.jizzax.phone",
+    emailKey: "regions.jizzax.email",
+    addressKey: "regions.jizzax.address",
+    hoursKey: "regions.jizzax.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   Namangan: {
-    name: "Namangan viloyati",
-    head: "Murodillo Hamidov",
-    phone: "+998 69 321 00 11",
-    email: "namangan@viloyat.uz",
-    address: "Namangan shahri, Istiqlol ko‘chasi 15",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.namangan.name",
+    headKey: "regions.namangan.head",
+    phoneKey: "regions.namangan.phone",
+    emailKey: "regions.namangan.email",
+    addressKey: "regions.namangan.address",
+    hoursKey: "regions.namangan.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   Navoiy: {
-    name: "Navoiy viloyati",
-    head: "Azamat Niyozov",
-    phone: "+998 79 444 22 11",
-    email: "navoiy@viloyat.uz",
-    address: "Navoiy shahri, Navoiy ko‘chasi 8",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.navoiy.name",
+    headKey: "regions.navoiy.head",
+    phoneKey: "regions.navoiy.phone",
+    emailKey: "regions.navoiy.email",
+    addressKey: "regions.navoiy.address",
+    hoursKey: "regions.navoiy.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   Qashqadaryo: {
-    name: "Qashqadaryo viloyati",
-    head: "Sherzod Mamatqulov",
-    phone: "+998 75 555 66 77",
-    email: "qashqadaryo@viloyat.uz",
-    address: "Qarshi shahri, Nasaf ko‘chasi 18",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.qashqadaryo.name",
+    headKey: "regions.qashqadaryo.head",
+    phoneKey: "regions.qashqadaryo.phone",
+    emailKey: "regions.qashqadaryo.email",
+    addressKey: "regions.qashqadaryo.address",
+    hoursKey: "regions.qashqadaryo.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   Samarqand: {
-    name: "Samarqand viloyati",
-    head: "Ulug‘bek Rahimov",
-    phone: "+998 66 123 45 67",
-    email: "samarqand@viloyat.uz",
-    address: "Samarqand shahri, Registon ko‘chasi 3",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.samarqand.name",
+    headKey: "regions.samarqand.head",
+    phoneKey: "regions.samarqand.phone",
+    emailKey: "regions.samarqand.email",
+    addressKey: "regions.samarqand.address",
+    hoursKey: "regions.samarqand.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   Sirdaryo: {
-    name: "Sirdaryo viloyati",
-    head: "Rustam Yusupov",
-    phone: "+998 67 234 56 78",
-    email: "sirdaryo@viloyat.uz",
-    address: "Guliston shahri, Istiqbol ko‘chasi 7",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.sirdaryo.name",
+    headKey: "regions.sirdaryo.head",
+    phoneKey: "regions.sirdaryo.phone",
+    emailKey: "regions.sirdaryo.email",
+    addressKey: "regions.sirdaryo.address",
+    hoursKey: "regions.sirdaryo.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   Surxondaryo: {
-    name: "Surxondaryo viloyati",
-    head: "Zafar Raxmatov",
-    phone: "+998 76 654 32 10",
-    email: "surxondaryo@viloyat.uz",
-    address: "Termiz shahri, Alisher Navoiy ko‘chasi 6",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.surxondaryo.name",
+    headKey: "regions.surxondaryo.head",
+    phoneKey: "regions.surxondaryo.phone",
+    emailKey: "regions.surxondaryo.email",
+    addressKey: "regions.surxondaryo.address",
+    hoursKey: "regions.surxondaryo.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   Toshkent: {
-    name: "Toshkent shahri",
-    head: "Jahongir Ortiqxo‘jayev",
-    phone: "+998 71 200 00 00",
-    email: "toshkent@shahar.uz",
-    address: "Toshkent shahri, Amir Temur shoh ko‘chasi 1",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.toshkent.name",
+    headKey: "regions.toshkent.head",
+    phoneKey: "regions.toshkent.phone",
+    emailKey: "regions.toshkent.email",
+    addressKey: "regions.toshkent.address",
+    hoursKey: "regions.toshkent.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   ToshkentViloyati: {
-    name: "Toshkent viloyati",
-    head: "Shukurulloxon Qodirov",
-    phone: "+998 70 111 22 33",
-    email: "toshkentvil@viloyat.uz",
-    address: "Nurafshon shahri, Ma’rifat ko‘chasi 10",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.toshkentViloyati.name",
+    headKey: "regions.toshkentViloyati.head",
+    phoneKey: "regions.toshkentViloyati.phone",
+    emailKey: "regions.toshkentViloyati.email",
+    addressKey: "regions.toshkentViloyati.address",
+    hoursKey: "regions.toshkentViloyati.hours",
     img: "Viloyat raxbari rasmi"
-
   },
   Xorazm: {
-    name: "Xorazm viloyati",
-    head: "Doniyor Karimov",
-    phone: "+998 62 333 44 55",
-    email: "xorazm@viloyat.uz",
-    address: "Urganch shahri, Al-Xorazmiy ko‘chasi 9",
-    hours: "Dushanba–Juma, 9:00–18:00",
+    nameKey: "regions.xorazm.name",
+    headKey: "regions.xorazm.head",
+    phoneKey: "regions.xorazm.phone",
+    emailKey: "regions.xorazm.email",
+    addressKey: "regions.xorazm.address",
+    hoursKey: "regions.xorazm.hours",
     img: "Viloyat raxbari rasmi"
-
-  },
+  }
 };
 
 export default regionInfo;
