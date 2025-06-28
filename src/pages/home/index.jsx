@@ -1,7 +1,9 @@
 import UzbekistanMap from "../../components/UzbekistanMap";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-
+import SocialMedias from "../../components/socialMedias";
+import VirtualReception from "../../components/about";
+import HeroCarousel from "../../components/mainPic";
 export default function Home() {
   const { t } = useTranslation();
 
@@ -28,18 +30,14 @@ export default function Home() {
     }
   ];
 
-  return (
-    <section className="py-12 px-4">
-      <h1 className="text-3xl font-bold text-[#0C2543] mb-4">
-        {t("home.pageTitle")}
-      </h1>
-      <p className="text-gray-700 text-lg">
-        {t("home.description")}
-      </p>
 
-      <div>
-        <UzbekistanMap className="w-full h-auto" />
+  return (
+    <section className="py-4 px-4">
+
+      <div className="w-[100%] m-auto h-[100vh] ">
+        <HeroCarousel />
       </div>
+
 
       <div className="py-10 px-4 md:px-10 bg-gray-50">
         <h1 className="text-3xl font-bold text-[#113892] mb-6">{t("home.latestNews")}</h1>
@@ -69,7 +67,11 @@ export default function Home() {
             </div>
           ))}
         </div>
+
       </div>
+      <SocialMedias />
+      <VirtualReception />
+      <UzbekistanMap className="w-full h-auto" />
     </section>
   );
 }
