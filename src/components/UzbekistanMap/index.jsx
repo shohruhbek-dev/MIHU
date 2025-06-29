@@ -9,49 +9,57 @@ export default function UzbekistanMap() {
   const chartRef = useRef(null);
   const navigate = useNavigate();
 
- useLayoutEffect(() => {
-  const root = am5.Root.new(chartRef.current);
-  root.setThemes([am5themes_Animated.new(root)]);
-  root.autoResize = false; // ✅ Prevent auto resize
+  useLayoutEffect(() => {
+    const root = am5.Root.new(chartRef.current);
+    root.setThemes([am5themes_Animated.new(root)]);
+    root.autoResize = true;
 
-  const chart = root.container.children.push(
-    am5map.MapChart.new(root, {
-      panX: "none",
-      panY: "none",
-      projection: am5map.geoMercator(),
-    })
-  );
+    const chart = root.container.children.push(
+      am5map.MapChart.new(root, {
+        projection: am5map.geoMercator(),
+        panX: "none",
+        panY: "none",
+        wheelX: "none",
+        wheelY: "none",
+        pinchZoom: false,
+      })
+    );
 
-  const polygonSeries = chart.series.push(
-    am5map.MapPolygonSeries.new(root, {
-      geoJSON: am5geodata_uzbekistanLow,
-      valueField: "value",
-    })
-  );
+    // Disable all zoom and pan interactions
+    chart.set("wheelable", false);
+    chart.set("panX", false);
+    chart.set("panY", false);
+    chart.set("zoomControl", null);
+    chart.chartContainer.get("background").events.disableType("wheel");
 
-  polygonSeries.mapPolygons.template.setAll({
-    tooltipText: "{name}",
-    interactive: true,
-  });
+    const polygonSeries = chart.series.push(
+      am5map.MapPolygonSeries.new(root, {
+        geoJSON: am5geodata_uzbekistanLow,
+        valueField: "value",
+      })
+    );
 
-  polygonSeries.mapPolygons.template.events.on("click", function (ev) {
-    const regionName = ev.target.dataItem.dataContext.name;
-    navigate(`/yangiliklar?menu_id=2&region=${encodeURIComponent(regionName)}#hududlar`);
-  });
+    polygonSeries.mapPolygons.template.setAll({
+      tooltipText: "{name}",
+      interactive: true,
+    });
 
-  polygonSeries.data.setAll([]);
+    polygonSeries.mapPolygons.template.events.on("click", function (ev) {
+      const regionName = ev.target.dataItem.dataContext.name;
+      navigate(`/yangiliklar?menu_id=2&region=${encodeURIComponent(regionName)}#hududlar`);
+    });
 
-  return () => root.dispose();
-}, [navigate]);
+    chart.appear(1000, 100); // Ensures layout/animation
 
+    return () => root.dispose();
+  }, [navigate]);
 
   return (
-  <div className="flex justify-center mt-10 p-6">
-  <div
-    ref={chartRef}
-    className="w-[800px] h-[500px] overflow-hidden" // ✅ Fixed size
-  />
-</div>
-
+    <div className="w-full py-4 px-4 md:px-10 mt-10">
+      <div
+        ref={chartRef}
+        className="w-full aspect-[2/1] sm:aspect-[3/1] md:aspect-[16/7] max-h-[600px]"
+      />
+    </div>
   );
 }

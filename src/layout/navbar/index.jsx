@@ -29,7 +29,6 @@ export default function Navbar() {
     { label: t("navbarList.label6"), to: "/contact" },
   ]
 
-  // Outside click for Sidebar
   useEffect(() => {
     function handleClickOutside(event) {
       const sidebar = document.getElementById("sidebar");
@@ -45,7 +44,6 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isSidebarOpen]);
 
-  // Outside click for mobile nav
   useEffect(() => {
     function handleClickOutside(event) {
       const mobileNav = document.getElementById("mobile-nav");
@@ -61,14 +59,13 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  const location = useLocation(); // Inside your Navbar component
+  const location = useLocation(); 
   return (
     <>
-      {/* Sidebar */}
       {isSidebarOpen && (
         <div
           id="sidebar"
-          className="fixed top-0 left-0 h-full w-[25%] bg-[#1E99FF] text-white shadow-lg z-50 p-4 overflow-y-auto"
+          className="fixed top-0 left-0 h-full w-[35%] max-md:w-[50%] bg-[#1E99FF] text-white shadow-lg z-50 p-4 overflow-y-auto"
         >
           <div className="flex justify-end mb-2">
             <button
@@ -143,7 +140,6 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Navbar */}
       <header className="bg-white shadow-md sticky top-0 z-40 px-10">
         <div className="container mx-auto px-4 py-3 flex gap-4 justify-between items-center">
           <button
@@ -162,7 +158,7 @@ export default function Navbar() {
               />
 
             </Link>
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="hidden min-[800px]:flex items-center space-x-6">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.to;
                 return (
@@ -176,10 +172,10 @@ export default function Navbar() {
                   </Link>
                 );
               })}
-              <div className="flex items-center space-x-2 border-l pl-4 ml-2">
+            </nav>
+              <div>
                 <LanguageSelector />
               </div>
-            </nav>
           </div>
           <div>
             <FaSearch size={20} className="text-gray-600" />
@@ -187,35 +183,37 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Responsive hamburger */}
-        <div className="md:hidden border-t border-b bg-white shadow-sm py-2 px-4 flex justify-end">
-          <button
-            className="text-[#0C2543]"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+        <div className="min-[800px]:hidden border-t border rounded-2xl bg-white shadow-sm py-2 my-2 px-4 flex flex-col">
+          <div className="flex justify-end">
+            <button
+              className="text-[#0C2543]"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+
+          {isOpen && (
+            <div id="mobile-nav" className="md:hidden bg-white flex flex-col p-5 pb-4">
+              {navLinks.map((link) => {
+                const isActive = location.pathname === link.to;
+                return (
+                  <Link
+                    key={link.label}
+                    to={link.to}
+                    className={`font-medium hover:text-blue-600 ${isActive ? "text-[#1753A1]" : "text-[#0C2543]"
+                      }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </div>
 
-        {isOpen && (
-          <div id="mobile-nav" className="md:hidden bg-white shadow-md px-4 pb-4">
-            {navLinks.map((link) => {
-              const isActive = location.pathname === link.to;
-              return (
-                <Link
-                  key={link.label}
-                  to={link.to}
-                  className={`font-medium hover:text-blue-600 ${isActive ? "text-[#1753A1]" : "text-[#0C2543]"
-                    }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
 
-          </div>
-        )}
       </header>
     </>
   );

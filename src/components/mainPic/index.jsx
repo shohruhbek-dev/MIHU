@@ -1,17 +1,31 @@
 import React, { useEffect, useState } from "react";
 import mainPic from '/src/assets/mainPic.jpg'
+import mainPic2 from '/src/assets/mainPic2.jpg'
+import mainPic3 from '/src/assets/mainPic3.jpg'
+import mainPic4 from '/src/assets/mainPic4.jpg'
+import mainPic5 from '/src/assets/mainPic5.jpg'
+import mainPic6 from '/src/assets/mainPic6.jpg'
 
-  const imageSlides = [
+const imageSlides = [
   {
     src: mainPic,
     caption: "Ташрифнинг биринчи куни",
   },
   {
-    src: mainPic,
+    src: mainPic2,
     caption: "Янги лойиҳа тақдимоти",
   },
   {
-    src: mainPic,
+    src: mainPic3,
+    caption: "Президент сафарда",
+  }, {
+    src: mainPic4,
+    caption: "Президент сафарда",
+  }, {
+    src: mainPic5,
+    caption: "Президент сафарда",
+  }, {
+    src: mainPic6,
     caption: "Президент сафарда",
   },
 ];
@@ -23,7 +37,7 @@ export default function HeroCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % imageSlides.length);
-    }, 1000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -31,43 +45,29 @@ export default function HeroCarousel() {
     setCurrent(index);
   };
 
-  const prevSlide = () => {
-    setCurrent((prev) => (prev - 1 + imageSlides.length) % imageSlides.length);
-  };
+  // const prevSlide = () => {
+  //   setCurrent((prev) => (prev - 1 + imageSlides.length) % imageSlides.length);
+  // };
 
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % imageSlides.length);
-  };
+  // const nextSlide = () => {
+  //   setCurrent((prev) => (prev + 1) % imageSlides.length);
+  // };
+
 
   return (
-    <div className="relative w-[90%] m-auto h-[100vh] overflow-hidden rounded-lg shadow-lg">
-      {/* Current Image */}
+    <div className="relative w-[90%] m-auto h-[100vh]  overflow-hidden rounded-lg shadow-lg">
       <img
-        className="w-full h-[120vh] transition duration-500"
+        className="w-full h-[100vh] max-md:h-[70vh] transition duration-500"
         src={imageSlides[current].src}
         alt={`slide-${current}`}
       />
 
-      {/* Caption */}
       <div className="absolute bottom-6 left-6 bg-black/60 text-white px-4 py-2 rounded text-sm">
         {imageSlides[current].caption}
       </div>
 
-      {/* Navigation Buttons */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white px-2 py-1 rounded hover:bg-black/70"
-      >
-        ‹
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white px-2 py-1 rounded hover:bg-black/70"
-      >
-        ›
-      </button>
+  
 
-      {/* Pagination Dots */}
       <div className="absolute bottom-4 w-full flex justify-center gap-2">
         {imageSlides.map((_, index) => (
           <button
@@ -80,3 +80,4 @@ export default function HeroCarousel() {
     </div>
   );
 }
+
