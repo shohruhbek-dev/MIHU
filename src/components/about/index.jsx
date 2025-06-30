@@ -1,16 +1,16 @@
 import React from "react";
-
+import mihuTelegram from '/src/assets/mihuTelegram.jpg'
+import mainPerson  from '/src/assets/mainPerson.jpg'
 export default function VirtualReception() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-10 py-8">
-      {/* Left Column */}
-      <div className="flex flex-col items-center text-center p-4 rounded-lg shadow bg-white">
+    <div className=" w-[100%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between ">
+      <div className="flex flex-col items-center gap-5 text-start p-4 rounded-lg shadow bg-white">
         <img
-          src="https://via.placeholder.com/400x400.png?text=Chairman+Image"
+          src={mainPerson}
           alt="Chairman"
-          className="rounded-md mb-4 w-full max-w-[300px] object-cover"
+          className="rounded-md mb-4 w-full max-w-[300px]r"
         />
-        <h2 className="text-lg sm:text-xl font-bold text-blue-800 mb-2">
+        <h2 className="text-lg sm:text-xl mb-7 font-bold text-blue-800 ">
           Ўзбекистон Миллий Иқтисодий Ҳамкорлик
           <br />
           Уюшмаси раисининг виртуал қабулхонаси
@@ -23,15 +23,14 @@ export default function VirtualReception() {
         </button>
       </div>
 
-      {/* Center Column – Telegram */}
       <div className="space-y-4">
         <h3 className="text-blue-700 font-bold text-lg">Telegram</h3>
         <div className="p-4 rounded-lg shadow bg-white">
           <div className="flex items-center gap-3 mb-3">
             <img
-              src="https://via.placeholder.com/40x40.png?text=Uz"
+              src = {mihuTelegram}
               alt="Channel"
-              className="rounded-full"
+              className="rounded-full w-[20%]"
             />
             <div>
               <p className="font-semibold">UzMIHU</p>
@@ -56,22 +55,30 @@ export default function VirtualReception() {
         </div>
       </div>
 
-      {/* Right Column – Facebook */}
-      <div className="space-y-4">
-        <h3 className="text-blue-800 font-bold text-lg">Facebook</h3>
-        <div className="w-full h-[500px] rounded-lg overflow-hidden shadow bg-white">
+      <div className="Facebook">
+        <h3 className="text-blue-800 font-bold text-lg ">Facebook</h3>
+
+        <div className="w-full  shadow rounded-lg">
           <iframe
+            className="w-full h-[700px] "
             title="Facebook Page"
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-            width="100%"
-            height="100%"
-            style={{ border: "none", overflow: "hidden" }}
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61576718413795&tabs=timeline&width=500&height=800&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+            width="500"
+            height="700"
+            style={{
+              border: "none",
+            }}
             scrolling="no"
             frameBorder="0"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
           ></iframe>
         </div>
       </div>
+
+
+
+
+
     </div>
   );
 }

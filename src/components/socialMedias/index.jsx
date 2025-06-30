@@ -48,11 +48,11 @@ export default function PresidentMediaSection() {
 
   return (
     <div className="px-4 sm:px-6 lg:px-20 py-10">
-      <div className="flex flex-wrap gap-4 sm:gap-6 mb-8 text-blue-800 items-center justify-between">
-        <h2 className="text-lg sm:text-xl font-bold text-blue-900 w-full sm:w-auto">
-          ПРЕЗИДЕНТ ИЖТИМОИЙ ТАРМОҚЛАРДА:
+      <div className="flex flex-wrap gap-4 sm:gap-6 mb-8 text-blue-800 items-center ">
+        <h2 className="text-lg flex-1 sm:text-xl font-bold text-blue-900 w-full sm:w-auto">
+          MIHU ИЖТИМОИЙ ТАРМОҚЛАРДА:
         </h2>
-        <div className="flex flex-wrap gap-3 text-sm">
+        <div className="flex flex-2 flex-wrap gap-3 text-sm justify-between">
           <a href="#" className="flex items-center gap-1 hover:underline">
             <FaTelegramPlane /> Telegram
           </a>
@@ -74,13 +74,13 @@ export default function PresidentMediaSection() {
         </div>
       </div>
 
-      <div className="relative mb-8 max-w-xl mx-auto">
+      <div className="relative mb-8  mx-auto">
         <input
           type="text"
           placeholder="Қидириш..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full px-5 py-3 border border-gray-300 rounded-full shadow focus:outline-none focus:ring focus:border-blue-400"
+          className="w-full px-5 py-5  shadow-md focus:outline-none  focus:border-none"
         />
         <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
           <FaSearch className="w-5 h-5" />

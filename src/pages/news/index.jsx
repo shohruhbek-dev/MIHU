@@ -9,11 +9,10 @@ export default function News() {
 
   const searchParams = new URLSearchParams(location.search);
   const menuId = searchParams.get("menu_id") || "1";
-  const region = searchParams.get("region"); // ✅ region from query string
+  const region = searchParams.get("region"); 
 
   const [news, setNews] = useState([]);
 
-  // ✅ Categories rendered fresh with translations on every render
   const categories = [
     { label: t("newsPage.cat1"), id: "1" },
     { label: t("newsPage.cat2"), id: "2" },
@@ -22,7 +21,6 @@ export default function News() {
     { label: t("newsPage.cat5"), id: "5" },
   ];
 
-  // ✅ Scroll to region block if region is passed
   useEffect(() => {
     if (region) {
       const anchor = document.getElementById("hududlar");
@@ -34,7 +32,6 @@ export default function News() {
     }
   }, [region]);
 
-  // ✅ Fake localized news by menu_id
   useEffect(() => {
     const fakeNewsData = {
       1: [t("newsPage.news1_1"), t("newsPage.news1_2")],
@@ -49,7 +46,6 @@ export default function News() {
 
   return (
     <div className="newsPage w-[80%] m-auto my-10 bg-white shadow-lg border border-gray-200 rounded-md">
-      {/* ✅ Mini Navbar */}
       <nav className="border-b border-gray-200">
         <div className="miniNewsnav flex flex-wrap px-4 space-x-6 text-sm font-medium overflow-x-auto">
           {categories.map((cat) => (
